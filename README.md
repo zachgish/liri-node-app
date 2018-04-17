@@ -15,7 +15,7 @@ OR
 
   
 #### Available Commands:
-* my-tweets `node liri.js my-tweets jazz_fan-101`
+* my-tweets `node liri.js my-tweets jazz_fan_101`
 * spotify-this-song `node liri.js spotify-this-song`
 * movie-this `node liri.js movie-this`
 * do-what-it-says 
