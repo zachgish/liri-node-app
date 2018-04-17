@@ -65,12 +65,20 @@ var getMeMovie= function(movieName){
         }
     });
 }
+var doWhatItSays = function(){
+    fs.readFile('random.txt.', 'utf8', function (err, data) {
+        if (err) throw err;
 
-fs.readFile('random.txt.', 'utf8', function (err, data) {
-    if (err) throw err;
-    console.log(data);
-});
+        var dataArr = data.split(',');
 
+        if (dataArr.length == 2){
+            pick(dataArr[0], dataArr [1]);
+        } else if (dataArr.length ==1){
+            pick(dataArr[0]);
+        }
+        console.log(data);
+    });
+}
 var pick = function(caseData, functionData){
     switch(caseData) {
         case 'my-tweets':
@@ -81,6 +89,9 @@ var pick = function(caseData, functionData){
             break;
         case 'movie-this':
             getMeMovie(functionData);
+        case 'do-what-it-says':
+            doWhatItSays();
+            break;
         default:
         console.log('LIRI does not know that');
     }
