@@ -15,9 +15,9 @@ OR
 
   
 #### Available Commands:
-* my-tweets `node liri.js my-tweets kingjames`
-* spotify-this-song `node liri.js spotify-this-song "bohemian rhapsody"`
-* movie-this `node liri.js movie-this inception`
+* my-tweets `node liri.js my-tweets jazz_fan-101`
+* spotify-this-song `node liri.js spotify-this-song`
+* movie-this `node liri.js movie-this`
 * do-what-it-says 
   * (This command reads a text file in the liribot directory and performs the command based on what is in the file. See random.txt)
 
