@@ -29,16 +29,18 @@ var getArtistNames = function(artist) {
 
 var getMeSpotify = function(songName) {
     var spotify = new Spotify(keys.spotifyKeys);
+    console.log(spotify)
     spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function (err, data) {
         if (err) {
             console.log('Error occurred: ' + err);
             return;
         }
 
-        var songs = data.tracks.items;
+        var songs = data.tracks.items
+        console.log('song data',songs)
             for(var i=0; i<songs.length; i++){
-                console.log(i);
-                console.log('artist(s): ' + songs[i].artist.map(getArtistNames));
+                //  console.log(i);
+                console.log('=========artist(s): ' + songs[i].artists[0].name);
                 console.log('song name: ' + songs[i].name);
                 console.log('preview song: ' + songs[i].preview_url);
                 console.log('album: ' + songs[i].album.name);
