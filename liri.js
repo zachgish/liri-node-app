@@ -1,6 +1,6 @@
 var keys = require('./keys.js');
 var Twitter = require('twitter');
-var spotify = require('spotify');
+var Spotify = require('node-spotify-api');
 var request = require('request');
 var fs = require('fs');
 
@@ -28,7 +28,7 @@ var getArtistNames = function(artist) {
 }
 
 var getMeSpotify = function(songName) {
-
+    var spotify = new Spotify(keys.spotifyKeys);
     spotify.search({ type: 'track', query: 'dancing in the moonlight' }, function (err, data) {
         if (err) {
             console.log('Error occurred: ' + err);
